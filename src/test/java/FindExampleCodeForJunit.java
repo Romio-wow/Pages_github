@@ -20,7 +20,7 @@ public class FindExampleCodeForJunit {
     public void testFindJunit() {
         open("https://github.com");
         $("[data-test-selector=nav-search-input]").setValue("selenide").pressEnter();
-        $$("ul.repo-list li").first().$("a").click();
+        $("ul.repo-list li").$("a").click();
         $("#wiki-tab").click();
         $(".js-wiki-more-pages-link").click();
         $("#wiki-pages-box").find(byText("SoftAssertions")).click();
